@@ -29,6 +29,8 @@ const Calculator = () => {
     }
   };
 
+
+   // negative zero is displayed after pressing operand
   const handleOperand = (userInput) => {
       setOperation(userInput)
       setHistory(display + userInput)
@@ -59,6 +61,8 @@ const Calculator = () => {
     }
   };
 
+
+  // error when pressed after numbers are already keyed in
   const handleDecimal = () => {
     if (!previousDisplay.includes(".")) {
         setPreviousDisplay(previousDisplay + ".")
@@ -74,6 +78,7 @@ const Calculator = () => {
       setDisplay("0");
       setHistory("");
     } else if (operation === "=") {
+      // display shows NaN history shows string
       setPreviousDisplay("previousDisplay.slice(0, -1)");
       setDisplay("display.slice(0, -1)");
       setHistory("history.slice(0, -1)");
@@ -92,6 +97,8 @@ const Calculator = () => {
     setSign("positive");
   };
 
+
+ 
   const handleSign = () => {
     if (sign === "positive") {
       setSign("negative");
@@ -105,6 +112,7 @@ const Calculator = () => {
       setHistory(history * -1);
     }
   };
+
 
   const handleZero = () => {
     if (display !== "0") {

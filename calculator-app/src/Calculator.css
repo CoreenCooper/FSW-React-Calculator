@@ -9,8 +9,11 @@
   width: 300px;
   height: 500px;
   border-radius: 15% 15% 40% 40%;
+  border: rgba(0, 0, 0, .7) solid 1px;
   position: absolute;
+  background-size: 10px 10px;
   background-color: black;
+  box-shadow: 2px 4px 3px 1px black;
   background-image: linear-gradient(
       45deg,
       #333 25%,
@@ -27,12 +30,11 @@
       #333 75%,
       #333
     );
-  background-size: 10px 10px;
 }
 
 .Inner-Container {
   background-color: #333;
-  box-shadow: 2px 4px 3px 1px black;
+  box-shadow: 2px 4px 3px -1px black;
   width: 275px;
   height: 490px;
   border-radius: 15% 15% 40% 40%;
@@ -45,12 +47,15 @@
   position: relative;
   z-index: 2;
   border-radius: 20px;
-  background-color: lightgrey;
-  background-image: linear-gradient(120deg, lightgrey 60%, white 85%, grey);
+  background-color: white;
+  /* background-image: linear-gradient(120deg, lightgrey 60%, white 85%, grey); */
   border: black solid 5px;
   margin: 30px 0 0 0;
   width: 225px;
   height: 75px;
+  box-shadow:
+  1px 0 1px 1px black,
+  inset 3px 1px 6px 3px black;
 }
 
 #history {
@@ -70,6 +75,7 @@
   margin: 15px 0 8px 0;
   position: relative;
   z-index: 2;
+  
 }
 
 #digits {
@@ -85,11 +91,14 @@
 
 button {
   background-color: #333;
-  color: skyblue;
+  color: black;
   font-size: 18px;
-  box-shadow: 2px 4px 3px 1px black;
+  box-shadow: 2px 2px 3px 1px black,
+  -2px 2px 7px 1px grey;
+  /* inset 3px 3px 5px 1px black; */
 
-  /* font-weight: bolder; */
+  font-weight: bolder;
+  text-shadow: .75px .20px 1px grey;
   width: 50px;
   height: 50px;
   border-radius: 100%;
